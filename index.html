@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fathima Zuveria & Bashiq Ali — Nikah Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --emerald-deep:#0F3D2E;
+    --emerald:#1A5C42;
+    --cream:#F8F4E9;
+    --cream-card:#EFE7D2;
+    --gold:#C9A75B;
+    --gold-soft:#E3D3A0;
+    --ink:#26291F;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Cormorant Garamond', serif;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  .label{
+    font-family:'Jost', sans-serif;
+    font-size:0.72rem;
+    letter-spacing:.14em;
+    color:var(--gold);
+  }
+  .arabic{
+    font-family:'Amiri', serif;
+    direction:rtl;
+  }
+  section{
+    padding:5.5rem 1.5rem;
+    max-width:640px;
+    margin:0 auto;
+    text-align:center;
+    position:relative;
+  }
+  .divider{
+    width:64px;
+    height:1px;
+    background:var(--gold);
+    margin:1.6rem auto;
+    opacity:.7;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    min-height:100vh;
+    background:linear-gradient(180deg,var(--emerald-deep) 0%, var(--emerald) 60%, var(--emerald-deep) 100%);
+    color:var(--cream);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:3rem 1.5rem;
+    position:relative;
+    overflow:hidden;
+    max-width:100%;
+  }
+  .arch-frame{
+    width:min(78vw, 340px);
+    margin-bottom:1.6rem;
+  }
+  .arch-frame svg{width:100%; height:auto; display:block;}
+  .bismillah{
+    font-family:'Amiri', serif;
+    font-size:2rem;
+    color:var(--gold-soft);
+    margin:0 0 .4rem;
+  }
+  .bismillah-sub{
+    font-family:'Jost', sans-serif;
+    font-size:.78rem;
+    letter-spacing:.06em;
+    color:rgba(248,244,233,.75);
+    margin-bottom:2.2rem;
+  }
+  .hero-invite{
+    font-family:'Jost', sans-serif;
+    font-size:.8rem;
+    letter-spacing:.05em;
+    color:var(--gold-soft);
+    margin-bottom:1.4rem;
+  }
+  .hero h1{
+    font-weight:500;
+    font-size:clamp(2rem, 7vw, 3rem);
+    margin:.1rem 0;
+    line-height:1.25;
+  }
+  .amp{
+    font-family:'Amiri', serif;
+    font-style:italic;
+    color:var(--gold);
+    display:block;
+    font-size:1.4rem;
+    margin:.3rem 0;
+  }
+  .hero-date{
+    margin-top:1.8rem;
+    font-family:'Jost', sans-serif;
+    font-size:.85rem;
+    letter-spacing:.08em;
+    color:var(--cream);
+  }
+  .scroll-hint{
+    position:absolute;
+    bottom:2rem;
+    left:50%;
+    transform:translateX(-50%);
+    font-family:'Jost', sans-serif;
+    font-size:.68rem;
+    letter-spacing:.1em;
+    color:rgba(248,244,233,.6);
+    animation:bob 2.4s ease-in-out infinite;
+  }
+  @keyframes bob{
+    0%,100%{transform:translate(-50%,0);}
+    50%{transform:translate(-50%,6px);}
+  }
+
+  /* ---------- Cordial invitation ---------- */
+  .invite-card{
+    background:var(--cream-card);
+    border:1px solid var(--gold-soft);
+    border-radius:2px;
+    padding:2.6rem 1.8rem;
+    margin-top:1.5rem;
+  }
+  .invite-card h2{
+    font-weight:500;
+    font-size:1.7rem;
+    margin:.2rem 0 .1rem;
+    color:var(--emerald-deep);
+  }
+  .invite-card p{
+    margin:.15rem 0;
+    font-size:.98rem;
+    color:#3d4032;
+  }
+  .and{
+    font-family:'Amiri', serif;
+    font-style:italic;
+    color:var(--gold);
+    margin:1.3rem 0;
+    font-size:1.1rem;
+  }
+
+  /* ---------- Ceremony details ---------- */
+  .details-grid{
+    display:flex;
+    flex-direction:column;
+    gap:1.6rem;
+    margin-top:2rem;
+  }
+  .detail-item{
+    padding:1.4rem 1rem;
+    border-top:1px solid var(--gold-soft);
+    border-bottom:1px solid var(--gold-soft);
+  }
+  .detail-item .label{display:block; margin-bottom:.5rem;}
+  .detail-item .value{
+    font-size:1.35rem;
+    color:var(--emerald-deep);
+  }
+  .detail-item .sub{
+    font-family:'Jost', sans-serif;
+    font-size:.8rem;
+    color:#6b6b5a;
+    margin-top:.3rem;
+  }
+
+  /* ---------- Scratch to reveal ---------- */
+  .secret-sub{
+    font-family:'Jost', sans-serif;
+    font-size:.82rem;
+    letter-spacing:.04em;
+    color:var(--emerald-deep);
+    margin-top:-.4rem;
+  }
+  .scratch-card-wrap{
+    position:relative;
+    width:300px;
+    height:170px;
+    margin:2rem auto 0;
+    border-radius:4px;
+    overflow:hidden;
+    border:1px solid var(--gold-soft);
+    box-shadow:0 6px 24px rgba(15,61,46,.12);
+  }
+  .scratch-reveal{
+    position:absolute;
+    inset:0;
+    background:var(--emerald-deep);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    color:var(--cream);
+  }
+  .reveal-label{
+    font-family:'Jost', sans-serif;
+    font-size:.7rem;
+    letter-spacing:.12em;
+    color:var(--gold-soft);
+    margin-bottom:.5rem;
+  }
+  .reveal-date{
+    font-size:2.1rem;
+    color:var(--gold);
+    font-weight:500;
+    letter-spacing:.04em;
+  }
+  #scratchCanvas{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    cursor:pointer;
+    touch-action:none;
+    transition:opacity .6s ease;
+  }
+  .scratch-hint{
+    font-family:'Jost', sans-serif;
+    font-size:.68rem;
+    letter-spacing:.08em;
+    color:#6b6b5a;
+    margin-top:1rem;
+  }
+
+  /* ---------- Countdown ---------- */
+  .countdown-wrap{
+    background:var(--emerald-deep);
+    color:var(--cream);
+    border-radius:2px;
+  }
+  .countdown-grid{
+    display:flex;
+    justify-content:center;
+    gap:1.4rem;
+    margin-top:1.8rem;
+    flex-wrap:wrap;
+  }
+  .countdown-grid div{
+    min-width:64px;
+  }
+  .countdown-num{
+    font-size:2.1rem;
+    color:var(--gold-soft);
+    display:block;
+    font-weight:500;
+  }
+  .countdown-cap{
+    font-family:'Jost', sans-serif;
+    font-size:.68rem;
+    letter-spacing:.1em;
+    color:rgba(248,244,233,.7);
+  }
+
+  /* ---------- Note ---------- */
+  .note p{
+    font-size:1.15rem;
+    font-style:italic;
+    color:#3d4032;
+    max-width:480px;
+    margin:0 auto;
+  }
+
+  /* ---------- Our story ---------- */
+  .story p{
+    font-size:1.02rem;
+    color:#3d4032;
+    text-align:left;
+  }
+
+  /* ---------- Venue ---------- */
+  .map-frame{
+    width:100%;
+    border:1px solid var(--gold-soft);
+    margin-top:1.6rem;
+    filter:saturate(.9);
+  }
+  .directions-btn{
+    display:inline-block;
+    margin-top:1.4rem;
+    padding:.7rem 1.6rem;
+    border:1px solid var(--gold);
+    color:var(--emerald-deep);
+    text-decoration:none;
+    font-family:'Jost', sans-serif;
+    font-size:.82rem;
+    letter-spacing:.05em;
+    border-radius:2px;
+    transition:background .2s ease, color .2s ease;
+  }
+  .directions-btn:hover{
+    background:var(--emerald-deep);
+    color:var(--cream);
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    text-align:center;
+    padding:3rem 1.5rem 4rem;
+    color:var(--gold);
+    font-family:'Amiri', serif;
+    font-style:italic;
+    font-size:1.3rem;
+    background:var(--emerald-deep);
+  }
+  footer span{
+    display:block;
+    font-family:'Jost', sans-serif;
+    font-style:normal;
+    font-size:.7rem;
+    letter-spacing:.08em;
+    color:rgba(248,244,233,.55);
+    margin-top:.6rem;
+  }
+
+  /* ---------- Music toggle ---------- */
+  .music-toggle{
+    position:fixed;
+    bottom:1.2rem;
+    right:1.2rem;
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    background:var(--emerald-deep);
+    border:1px solid var(--gold);
+    color:var(--gold-soft);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    z-index:50;
+    font-size:1.1rem;
+  }
+
+  /* ---------- Confetti ---------- */
+  .confetti-piece{
+    position:fixed;
+    top:-20px;
+    width:8px;
+    height:14px;
+    z-index:999;
+    pointer-events:none;
+    animation:confetti-fall linear forwards;
+  }
+  @keyframes confetti-fall{
+    to{
+      transform:translateY(110vh) rotate(540deg);
+      opacity:.9;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .scroll-hint{animation:none;}
+    .confetti-piece{animation:none; display:none;}
+  }
+</style>
+</head>
+<body>
+
+<audio id="nasheed" loop preload="none">
+  <source src="audio/nasheed.mp3" type="audio/mpeg">
+</audio>
+<button class="music-toggle" id="musicToggle" aria-label="Toggle nasheed audio">♪</button>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="arch-frame">
+    <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 190 V90 C20 40 60 10 150 10 C240 10 280 40 280 90 V190" stroke="#C9A75B" stroke-width="1.5"/>
+      <path d="M40 190 V95 C40 55 75 30 150 30 C225 30 260 55 260 95 V190" stroke="#C9A75B" stroke-width="1" opacity="0.5"/>
+    </svg>
+  </div>
+  <p class="bismillah arabic">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+  <p class="bismillah-sub">In the name of Allah, the Most Gracious, the Most Merciful</p>
+  <p class="hero-invite">With love and gratitude to Allah, we invite you to celebrate our Nikah</p>
+  <h1>Fathima Zuveria<span class="amp">&amp;</span>Mohammed Bashiq Ali</h1>
+  <!-- <p class="hero-date">Thursday · 15th October, 2026 · 4th Jumada-al-awwal, 1448 H</p> -->
+  <p class="scroll-hint">SCROLL DOWN ⌄</p>
+</section>
+
+<!-- CORDIAL INVITATION -->
+<section>
+  <p class="label">CORDIAL INVITATION</p>
+  <div class="divider"></div>
+  <div class="invite-card">
+    <h2>Fathima Zuveria</h2>
+    <p>D/O. Mohammed Rafeeq &amp; Aysha</p>
+    <p>Grand D/O of D Ibrahim & Beefathima, Sullia ,<br> Late Adam & Fathima, Ullal</p>
+    <p class="and">and</p>
+    <h2>Mohammed Bashiq Ali </h2>
+    <p>S/O. Basheer  &amp; Raziya</p>
+    
+  </div>
+</section>
+
+
+<!-- A SECRET FOR YOU: SCRATCH TO REVEAL -->
+<section class="secret">
+  <p class="label">A SECRET FOR YOU</p>
+  <div class="divider"></div>
+  <p class="secret-sub">✦ Scratch to reveal our wedding date ✦</p>
+  <div class="scratch-card-wrap">
+    <div class="scratch-reveal">
+      <span class="reveal-label">OUR NIKAH DAY</span>
+      <span class="reveal-date">15 · 10 · 2026</span>
+    </div>
+    <canvas id="scratchCanvas" width="300" height="170"></canvas>
+  </div>
+  <p class="scratch-hint" id="scratchHint">rub gently with your finger completely</p>
+</section>
+
+
+<!-- CEREMONY DETAILS -->
+<section>
+  <p class="label">WEDDING CEREMONY</p>
+  <div class="divider"></div>
+  <div class="details-grid">
+    <div class="detail-item">
+      <span class="label">DATE</span>
+      <span class="value">Thursday, 15 October 2026</span>
+      <div class="sub">4th Jumada-al-awwal, 1448 Hijri</div>
+    </div>
+    <div class="detail-item">
+      <span class="label">NIKAH</span>
+      <span class="value">11:30 AM</span>
+      <div class="sub">Followed by lunch</div>
+    </div>
+    <div class="detail-item">
+      <span class="label">VENUE</span>
+      <span class="value">Unity Hall</span>
+      <div class="sub">Kallapu, Mangaluru, Karnataka</div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- COUNTDOWN -->
+<section class="countdown-wrap">
+  <p class="label" style="color:var(--gold-soft);">COUNTING DOWN TO THE NIKAH</p>
+  <div class="divider" style="background:var(--gold);"></div>
+  <div class="countdown-grid" id="countdown">
+    <div><span class="countdown-num" id="cd-days">00</span><span class="countdown-cap">DAYS</span></div>
+    <div><span class="countdown-num" id="cd-hours">00</span><span class="countdown-cap">HRS</span></div>
+    <div><span class="countdown-num" id="cd-mins">00</span><span class="countdown-cap">MIN</span></div>
+    <div><span class="countdown-num" id="cd-secs">00</span><span class="countdown-cap">SEC</span></div>
+  </div>
+</section>
+
+<!-- NOTE -->
+<section class="note">
+  <p class="label">A NOTE FOR YOU</p>
+  <div class="divider"></div>
+  <p>"With hearts full of love and gratitude to Allah, we invite you to witness the beginning of our forever."</p>
+</section>
+
+<!-- OUR STORY -->
+<section class="story">
+  <p class="label" style="text-align:center;">OUR STORY</p>
+  <div class="divider"></div>
+  <p>Every union carries its own qadr, written long before two hearts ever meet. Ours found its way through patience, prayer, and quiet certainty that this was the path meant for us.</p>
+  <p>With Allah's mercy guiding every step, we now begin this new chapter together — and we would be honoured to have you there to witness it.</p>
+</section>
+
+<!-- VENUE / MAP -->
+<section>
+  <p class="label">FIND US</p>
+  <div class="divider"></div>
+  <h2 style="font-weight:500; color:var(--emerald-deep); margin:.2rem 0;">Unity Hall</h2>
+  <p style="color:#6b6b5a; font-family:'Jost', sans-serif; font-size:.85rem;">Kallapu, Mangaluru, Karnataka</p>
+  <iframe
+    class="map-frame"
+    height="280"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    src="https://www.google.com/maps?q=Unity+Hall,+Kallapu,+Mangaluru,+Karnataka&output=embed">
+  </iframe>
+  <br>
+  <a class="directions-btn" href="https://www.google.com/maps/search/?api=1&query=Unity+Hall,+Kallapu,+Mangaluru,+Karnataka" target="_blank" rel="noopener">Get Directions →</a>
+</section>
+
+<footer>
+  Fathima Zuveria &amp; Mohammed Bashiq Ali
+  <span>CRAFTED WITH LOVE &amp; BLESSINGS</span>
+</footer>
+
+<script>
+  // Countdown to Nikah — 15 Oct 2026, 11:30 AM IST
+  const weddingDate = new Date("2026-10-15T11:30:00+05:30").getTime();
+
+  function updateCountdown(){
+    const now = new Date().getTime();
+    const diff = weddingDate - now;
+    if(diff <= 0){
+      document.getElementById('countdown').innerHTML = '<p style="font-family:\'Cormorant Garamond\',serif; font-size:1.3rem;">The Nikah day has arrived — Alhamdulillah!</p>';
+      return;
+    }
+    const days = Math.floor(diff / (1000*60*60*24));
+    const hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+    const mins = Math.floor((diff % (1000*60*60)) / (1000*60));
+    const secs = Math.floor((diff % (1000*60)) / 1000);
+
+    document.getElementById('cd-days').textContent = String(days).padStart(2,'0');
+    document.getElementById('cd-hours').textContent = String(hours).padStart(2,'0');
+    document.getElementById('cd-mins').textContent = String(mins).padStart(2,'0');
+    document.getElementById('cd-secs').textContent = String(secs).padStart(2,'0');
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  // Music toggle
+  const audio = document.getElementById('nasheed');
+  const btn = document.getElementById('musicToggle');
+  let playing = false;
+  btn.addEventListener('click', () => {
+    if(playing){
+      audio.pause();
+      btn.textContent = '♪';
+    } else {
+      audio.play().catch(()=>{});
+      btn.textContent = '❙❙';
+    }
+    playing = !playing;
+  });
+
+  // ---------- Scratch to reveal ----------
+  (function(){
+    const canvas = document.getElementById('scratchCanvas');
+    const ctx = canvas.getContext('2d');
+    const hint = document.getElementById('scratchHint');
+    let revealed = false;
+
+    function paintScratchLayer(){
+      const w = canvas.width, h = canvas.height;
+      const grad = ctx.createLinearGradient(0,0,w,h);
+      grad.addColorStop(0, '#C9A75B');
+      grad.addColorStop(1, '#0F3D2E');
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.fillStyle = grad;
+      ctx.fillRect(0,0,w,h);
+
+      ctx.fillStyle = 'rgba(248,244,233,0.85)';
+      ctx.font = "600 15px 'Jost', sans-serif";
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('SCRATCH HERE', w/2, h/2);
+    }
+    paintScratchLayer();
+
+    function getPos(e){
+      const rect = canvas.getBoundingClientRect();
+      const scaleX = canvas.width / rect.width;
+      const scaleY = canvas.height / rect.height;
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+      return {
+        x: (clientX - rect.left) * scaleX,
+        y: (clientY - rect.top) * scaleY
+      };
+    }
+
+    function scratch(e){
+      if(revealed) return;
+      const pos = getPos(e);
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.beginPath();
+      ctx.arc(pos.x, pos.y, 18, 0, Math.PI * 2);
+      ctx.fill();
+      checkCleared();
+    }
+
+    function checkCleared(){
+      const w = canvas.width, h = canvas.height;
+      const data = ctx.getImageData(0,0,w,h).data;
+      let cleared = 0;
+      const total = w * h;
+      for(let i = 3; i < data.length; i += 4 * 20){
+        if(data[i] === 0) cleared++;
+      }
+      const sampled = Math.ceil(total / 20);
+      if(cleared / sampled > 0.55 && !revealed){
+        revealed = true;
+        canvas.style.opacity = '0';
+        hint.textContent = 'Alhamdulillah — save the date! ✦';
+        setTimeout(() => { canvas.style.pointerEvents = 'none'; }, 600);
+        dropConfetti();
+      }
+    }
+
+    let isDrawing = false;
+    canvas.addEventListener('mousedown', (e) => { isDrawing = true; scratch(e); });
+    canvas.addEventListener('mousemove', (e) => { if(isDrawing) scratch(e); });
+    window.addEventListener('mouseup', () => { isDrawing = false; });
+    canvas.addEventListener('touchstart', (e) => { isDrawing = true; scratch(e); }, {passive:true});
+    canvas.addEventListener('touchmove', (e) => { if(isDrawing) scratch(e); }, {passive:true});
+    canvas.addEventListener('touchend', () => { isDrawing = false; });
+
+    function dropConfetti(){
+      const colors = ['#C9A75B', '#E3D3A0', '#1A5C42', '#F8F4E9'];
+      const count = 60;
+      for(let i = 0; i < count; i++){
+        const piece = document.createElement('div');
+        piece.className = 'confetti-piece';
+        piece.style.left = Math.random() * 100 + 'vw';
+        piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+        piece.style.animationDuration = (2.2 + Math.random() * 1.8) + 's';
+        piece.style.opacity = String(0.7 + Math.random() * 0.3);
+        piece.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+        document.body.appendChild(piece);
+        setTimeout(() => piece.remove(), 4500);
+      }
+    }
+  })();
+</script>
+
+</body>
+</html>
